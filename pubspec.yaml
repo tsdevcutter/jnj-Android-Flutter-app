@@ -1,0 +1,62 @@
+name: jnjversion01windows
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  sqflite: ^2.4.2
+  intl: ^0.20.2
+  http: ^1.6.0
+  path_provider: ^2.1.5
+  url_launcher: ^6.3.2
+  geolocator: ^13.0.0
+  permission_handler: ^11.0.0
+  socket_io_client: ^2.0.3+1
+  upgrader: ^12.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: "^0.14.3"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.png"
+
+  # rules and activating additional ones.
+  flutter_lints: ^6.0.0
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+
+fonts:
+  - family: Poppins
+    fonts:
+      - asset: assets/fonts/Poppins-Regular.ttf
+      - asset: assets/fonts/Poppins-Italic.ttf
+      - asset: assets/fonts/Poppins-Thin.ttf
+      - asset: assets/fonts/Poppins-Bold.ttf
+        weight: 700
+
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
