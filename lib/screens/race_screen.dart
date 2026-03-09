@@ -21,7 +21,7 @@ class RaceScreen extends StatefulWidget {
 
 class _RaceScreenState extends State<RaceScreen> {
 
-  String _currentPosition = "Ready to Track (10m intervals)";
+  String _currentPosition = "Ready to Track (150m intervals)";
   StreamSubscription<Position>? _positionStream;
   bool _isTracking = false;
   User? _user;
@@ -45,7 +45,7 @@ class _RaceScreenState extends State<RaceScreen> {
 
   final LocationSettings _lowPowerSettings = const LocationSettings(
     accuracy: LocationAccuracy.medium, // Medium accuracy uses less battery than High
-    distanceFilter: 10,               // Only updates every 10 meters
+    distanceFilter: 150,               // Only updates every 150 meters
   );
 
   void _connectSocket() {
@@ -229,7 +229,7 @@ class _RaceScreenState extends State<RaceScreen> {
                     Column(
                       children: [
                         Text(
-                          _isTracking ? "🛰️ Tracking Active" : "📡 JnJ Ready",
+                          _isTracking ? "🛰️ Tracking Active" : "📡 Ready",
                           style: TextStyle(
                             color: _isTracking ? Colors.green : Colors.grey,
                           ),
@@ -253,7 +253,7 @@ class _RaceScreenState extends State<RaceScreen> {
                           child: Text(
                             _isTracking
                                 ? "Stop"
-                                : "Start Tracking (10m)",
+                                : "Start Tracking (150m)",
                           ),
                         ),
                       ],

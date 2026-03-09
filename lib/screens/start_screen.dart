@@ -25,7 +25,15 @@ class _StartScreenState extends State<StartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Loading..."),
+        child: Column(
+          // This centers the children vertically within the Column
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircularProgressIndicator(),
+            SizedBox(height: 16), // Adds a little breathing room between the spinner and text
+            Text("Loading..."),
+          ],
+        ),
       ),
     );
   }
